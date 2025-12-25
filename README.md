@@ -17,7 +17,7 @@ Secure and simple validation library for Telegram **Login Widget** and **Web App
 ## Installation
 
 ```bash
-composer kilogram/auth
+composer require kilogram/auth
 ```
 
 ## Quick start
