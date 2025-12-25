@@ -1,6 +1,6 @@
 <?php
 
-namespace Telegram\Auth\Exceptions;
+namespace Kilogram\Auth\Exceptions;
 
 use RuntimeException;
 

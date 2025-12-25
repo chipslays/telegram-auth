@@ -17,7 +17,7 @@ Secure and simple validation library for Telegram **Login Widget** and **Web App
 ## Installation
 
 ```bash
-composer telegram/auth
+composer kilogram/auth
 ```
 
 ## Quick start
@@ -27,7 +27,7 @@ Usage examples are also available in the [examples](/examples) directory.
 ### Login Widget (simple)
 
 ```php
-use Telegram\Auth\Validator;
+use Kilogram\Auth\Validator;
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -41,9 +41,9 @@ if ($validator->isValidLoginWidget($data)) {
 ### Login Widget (with exceptions)
 
 ```php
-use Telegram\Auth\Validator;
-use Telegram\Auth\Exceptions\InvalidDataException;
-use Telegram\Auth\Exceptions\ValidationException;
+use Kilogram\Auth\Validator;
+use Kilogram\Auth\Exceptions\InvalidDataException;
+use Kilogram\Auth\Exceptions\ValidationException;
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -62,7 +62,7 @@ try {
 ### Web App (simple)
 
 ```php
-use Telegram\Auth\Validator;
+use Kilogram\Auth\Validator;
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -76,9 +76,9 @@ if ($validator->isValidWebApp($initData)) {
 ### Web App (with exceptions)
 
 ```php
-use Telegram\Auth\Validator;
-use Telegram\Auth\Exceptions\InvalidDataException;
-use Telegram\Auth\Exceptions\ValidationException;
+use Kilogram\Auth\Validator;
+use Kilogram\Auth\Exceptions\InvalidDataException;
+use Kilogram\Auth\Exceptions\ValidationException;
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -98,7 +98,7 @@ try {
 ### Web App Third-Party (simple)
 
 ```php
-use Telegram\Auth\Validator;
+use Kilogram\Auth\Validator;
 
 if (Validator::isValidWebAppDataForThirdParty($initData, $botId)) {
     echo "Web App authenticated (Third-Party)!";
@@ -110,8 +110,8 @@ if (Validator::isValidWebAppDataForThirdParty($initData, $botId)) {
 ### Web App Third-Party (with exceptions)
 
 ```php
-use Telegram\Auth\Validator;
-use Telegram\Auth\Exceptions\ValidationException;
+use Kilogram\Auth\Validator;
+use Kilogram\Auth\Exceptions\ValidationException;
 
 try {
     Validator::validateWebAppDataForThirdParty($initData, $botId);

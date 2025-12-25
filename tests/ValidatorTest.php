@@ -1,11 +1,11 @@
 <?php
 
-namespace Telegram\Auth\Tests;
+namespace Kilogram\Auth\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Telegram\Auth\Validator;
-use Telegram\Auth\Exceptions\InvalidDataException;
-use Telegram\Auth\Exceptions\ValidationException;
+use Kilogram\Auth\Validator;
+use Kilogram\Auth\Exceptions\InvalidDataException;
+use Kilogram\Auth\Exceptions\ValidationException;
 
 class ValidatorTest extends TestCase
 {

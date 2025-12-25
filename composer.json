@@ -1,5 +1,5 @@
 {
-    "name": "telegram/auth",
+    "name": "kilogram/auth",
     "description": "Secure and simple validation library for Telegram Login Widget and Web App data (including Third-Party validation support).",
     "type": "library",
     "license": "MIT",
@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Telegram\\Auth\\": "src/"
+            "Kilogram\\Auth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Telegram\\Auth\\Tests\\": "tests/"
+            "Kilogram\\Auth\\Tests\\": "tests/"
         }
     },
     "scripts": {

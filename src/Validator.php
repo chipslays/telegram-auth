@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Telegram\Auth;
+namespace Kilogram\Auth;
 
 use RuntimeException;
 use SensitiveParameter;
-use Telegram\Auth\Exceptions\InvalidDataException;
-use Telegram\Auth\Exceptions\ValidationException;
+use Kilogram\Auth\Exceptions\InvalidDataException;
+use Kilogram\Auth\Exceptions\ValidationException;
 
 /**
  * Telegram Authentication Validator.
