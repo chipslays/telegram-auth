@@ -4,15 +4,15 @@ Secure and simple validation library for Telegram **Login Widget** and **Web App
 
 ## Features
 
-- Validate Telegram Login Widget payload (`validateLoginWidget()` / `isValidLoginWidget()`).
-- Validate Telegram Web App `initData` (`validateWebApp()` / `isValidWebApp()`).
-- Validate Web App data for third-party use (no bot token) (`validateWebAppDataForThirdParty()` / `isValidWebAppDataForThirdParty()`).
+- Validate Telegram Login Widget payload.
+- Validate Telegram Web App.
+- Validate Telegram Web App data for Third-Party Use.
 
 ## Requirements
 
-- PHP >= 8.2
-- ext-hash
-- ext-sodium
+- [PHP](https://www.php.net/): `^8.2`
+- [ext-hash](https://www.php.net/manual/en/book.hash.php): `*`
+- [ext-sodium](https://www.php.net/manual/en/book.sodium.php): `*`
 
 ## Installation
 
