@@ -1,0 +1,53 @@
+{
+    "name": "telegram/auth",
+    "description": "Secure and simple validation library for Telegram Login Widget and Web App data (including Third-Party validation support).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "telegram",
+        "authentication",
+        "auth",
+        "validation",
+        "bot",
+        "webapp",
+        "login-widget",
+        "security"
+    ],
+    "authors": [
+        {
+            "name": "Chipslays",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/chipslays/telegram-auth/issues",
+        "source": "https://github.com/chipslays/telegram-auth"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-hash": "*",
+        "ext-sodium": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Telegram\\Auth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Telegram\\Auth\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit tests"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
