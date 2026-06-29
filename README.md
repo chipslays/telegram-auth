@@ -3,14 +3,24 @@
 </h1>
 
 <p align="center">
+    <p align="center">
+    <a href="https://packagist.org/packages/kilogram/auth"><img src="https://img.shields.io/packagist/v/kilogram/auth" alt="Latest Version"></a>
+    <a href="https://packagist.org/packages/kilogram/auth"><img src="https://img.shields.io/packagist/php-v/kilogram/auth" alt="PHP Version"></a>
+    <a href="https://github.com/chipslays/telegram-auth/blob/main/LICENSE"><img src="https://img.shields.io/github/license/chipslays/telegram-auth?1" alt="License"></a>
+    <a href="https://github.com/chipslays/telegram-auth"><img src="https://img.shields.io/github/stars/chipslays/telegram-auth?style=social" alt="Stars"></a>
+    <a href="https://packagist.org/packages/kilogram/auth"><img src="https://img.shields.io/packagist/dt/kilogram/auth" alt="Downloads"></a>
+</p>
     Secure and simple validation library for Telegram <strong><a href="https://core.telegram.org/widgets/login">Login Widget</a></strong> and <strong><a href="https://core.telegram.org/bots/webapps">Web App</a></strong> (including <strong><a href="https://core.telegram.org/bots/webapps#validating-data-for-third-party-use">Third-Party</a></strong> validation support).
 </p>
 
 ## Features
 
-- Validate Telegram Login Widget payload.
-- Validate Telegram Web App.
-- Validate Telegram Web App data for Third-Party Use.
+- ✅ **Telegram Login Widget** – validate payloads from the login widget (hash verification, timestamp check).
+- ✅ **Telegram Web App** – authenticate users inside mini‑apps by verifying `initData`.
+- ✅ **Third‑Party Use** – validate Telegram data for external services (without a bot token, using bot ID).
+- ✅ **Simple API** – ready‑to‑use methods like `isValidLoginWidget()`, `validateWebApp()`, plus exceptions for error handling.
+- ✅ **Secure by design** – uses cryptographically strong hashing (`hash_hmac`, `sodium`) to prevent data tampering.
+- ✅ **PHP 8.2+** – modern, strictly typed code.
 
 ## Requirements
 
