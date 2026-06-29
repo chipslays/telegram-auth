@@ -1,6 +1,10 @@
-# Telegram Auth
+<h1 align="center">
+    Telegram Auth 🔑
+</h1>
 
-Secure and simple validation library for Telegram [**Login Widget**](https://core.telegram.org/widgets/login) and [**Web App**](https://core.telegram.org/bots/webapps) (including [**Third-Party**](https://core.telegram.org/bots/webapps#validating-data-for-third-party-use) validation support).
+<p align="center">
+    Secure and simple validation library for Telegram <strong><a href="https://core.telegram.org/widgets/login">Login Widget</a></strong> and <strong><a href="https://core.telegram.org/bots/webapps">Web App</a></strong> (including <strong><a href="https://core.telegram.org/bots/webapps#validating-data-for-third-party-use">Third-Party</a></strong> validation support).
+</p>
 
 ## Features
 
