@@ -36,9 +36,12 @@ composer require kilogram/auth
 
 ## Quick start
 
-Usage examples are also available in the [examples](/examples) directory.
+> [!NOTE]
+> Usage examples are also available in the [examples](/examples) directory.
 
 ### Login Widget (simple)
+
+Basic validation of the data received from the Telegram Login Widget. Checks the hash and timestamp, returns a boolean result.
 
 ```php
 use Kilogram\Auth\Validator;
@@ -55,6 +58,8 @@ if ($validator->isValidLoginWidget($data)) {
 ```
 
 ### Login Widget (with exceptions)
+
+A more robust approach that throws specific exceptions for invalid input (missing parameters) and validation failures (tampered data).
 
 ```php
 use Kilogram\Auth\Validator;
@@ -79,6 +84,8 @@ try {
 
 ### Web App (simple)
 
+Verifies the `initData` string from a Telegram Web App. Returns `true` if the signature is valid and the data is fresh.
+
 ```php
 use Kilogram\Auth\Validator;
 
@@ -94,6 +101,8 @@ if ($validator->isValidWebApp($initData)) {
 ```
 
 ### Web App (with exceptions)
+
+Same as above, but throws exceptions for malformed input or invalid signatures, giving you finer control over error handling.
 
 ```php
 use Kilogram\Auth\Validator;
@@ -119,6 +128,8 @@ try {
 
 ### Web App Third-Party (simple)
 
+Validates data for third‑party services without using a bot token. Only the bot ID is required.
+
 ```php
 use Kilogram\Auth\Validator;
 
@@ -133,6 +144,8 @@ if (Validator::isValidWebAppDataForThirdParty($initData, $botId)) {
 
 ### Web App Third-Party (with exceptions)
 
+The same third‑party validation, but with exception-based error reporting.
+
 ```php
 use Kilogram\Auth\Validator;
 use Kilogram\Auth\Exceptions\ValidationException;
@@ -146,6 +159,11 @@ try {
     echo "Authentication failed";
 }
 ```
+
+> [!TIP]
+> **When to use simple vs exceptions?**  
+> Use the **simple** methods (`isValid*`) when you only need a boolean result (e.g., in controllers, middleware, or conditional logic).  
+> Use the **exception** methods (`validate*`) when you need granular error handling – they distinguish between **malformed input** (developer errors, e.g., missing parameters) and **invalid signatures** (security issues, e.g., tampered data).
 
 ## License
 
