@@ -33,6 +33,8 @@ Usage examples are also available in the [examples](/examples) directory.
 ```php
 use Kilogram\Auth\Validator;
 
+$data = $_GET;
+
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
 if ($validator->isValidLoginWidget($data)) {
@@ -48,6 +50,8 @@ if ($validator->isValidLoginWidget($data)) {
 use Kilogram\Auth\Validator;
 use Kilogram\Auth\Exceptions\InvalidDataException;
 use Kilogram\Auth\Exceptions\ValidationException;
+
+$data = $_GET;
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -68,6 +72,8 @@ try {
 ```php
 use Kilogram\Auth\Validator;
 
+$initData = $_POST['initData'];
+
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
 if ($validator->isValidWebApp($initData)) {
@@ -83,6 +89,8 @@ if ($validator->isValidWebApp($initData)) {
 use Kilogram\Auth\Validator;
 use Kilogram\Auth\Exceptions\InvalidDataException;
 use Kilogram\Auth\Exceptions\ValidationException;
+
+$initData = $_POST['initData'];
 
 $validator = new Validator($_ENV['TELEGRAM_BOT_TOKEN']);
 
@@ -104,6 +112,8 @@ try {
 ```php
 use Kilogram\Auth\Validator;
 
+$initData = $_POST['initData'];
+
 if (Validator::isValidWebAppDataForThirdParty($initData, $botId)) {
     echo "Web App authenticated (Third-Party)!";
 } else {
@@ -116,6 +126,8 @@ if (Validator::isValidWebAppDataForThirdParty($initData, $botId)) {
 ```php
 use Kilogram\Auth\Validator;
 use Kilogram\Auth\Exceptions\ValidationException;
+
+$initData = $_POST['initData'];
 
 try {
     Validator::validateWebAppDataForThirdParty($initData, $botId);
